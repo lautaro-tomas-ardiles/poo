@@ -1,4 +1,20 @@
 import java.util.Scanner;
+
+class Income{
+
+	private int netRevenue;
+    public int totalIncome;
+    public int taxPercent;
+
+    public void CalculateNetRevenue(){
+    	netRevenue = totalIncome - totalIncome * taxPercent / 100   ;
+    }
+
+    public int getNetRevenue(){
+        return netRevenue;
+    }
+}
+
 public class main {
 	public static void main(String[] args) {
 
@@ -13,18 +29,4 @@ public class main {
 		System.out.println("Net revenue: " + income.getNetRevenue());
 
 	}
-}
-class Income{
-
-	private int netRevenue;
-    public int totalIncome;
-    public int taxPercent;
-
-    public void CalculateNetRevenue(){
-    	netRevenue = totalIncome - totalIncome * taxPercent / 100   ;
-    }
-
-    public int getNetRevenue(){
-        return netRevenue;
-    }
 }

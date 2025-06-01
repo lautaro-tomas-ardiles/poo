@@ -15,11 +15,12 @@ class Bowling {
     //your code goes here
     void getWinner() {
 
-        ArrayList<Entry<String, Integer> > listOfEntry = new ArrayList<>(players.entrySet());
+        ArrayList listOfEntry = new ArrayList<>(players.entrySet());
 
         ArrayList<Integer> v = players.values().stream().collect(Collectors.toCollection(ArrayList::new));
 
         Iterator it = players.entrySet().iterator();
+
 	    while (it.hasNext()) {
             Map.Entry<Integer, Integer> entry = (Map.Entry) it.next();
             if (entry.getValue() == Collections.max(v)){
